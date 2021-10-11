@@ -10,16 +10,30 @@
   left: 50%;
   margin: -100px 0 0 -150px;
   }
+    #clicks {
+    position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+  }
   </style>
   <script>
       clicks = 0;
 function clickBtn() {
 clicks = clicks=+1;
 }
+function calcClks() {
+document.getElementById("clicks").innerHTML = clicks;
+}
+      setinterval(calcClks, 100, true);
     </script>
   <title>Button Clicker Beta</title>
   </head>
 <body>
+    <h1 id="clicks">0</h1>
     <button onclick="clickBtn()" id="btn">CLICK</button>
   </body>
 </html>
