@@ -1,16 +1,7 @@
 <html>
 <head>
 <style>
-#btn {
-    position: absolute;
-  width: 300px;
-  height: 200px;
-  z-index: 15;
-  top: 50%;
-  left: 50%;
-  margin: -100px 0 0 -150px;
-  }
-    #clicks {
+#btn_CONTAINER {
     position: absolute;
   width: 300px;
   height: 200px;
@@ -33,7 +24,9 @@ document.getElementById("clicks").innerHTML = clicks;
   <title>Button Clicker Beta</title>
   </head>
 <body>
+    <div id="btn_CONTAINER">
     <h1 id="clicks">0</h1>
     <button onclick="clickBtn()" id="btn">CLICK</button>
+    </div>
   </body>
 </html>
